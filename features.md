@@ -2,7 +2,7 @@
 
 ## Assumptions
 - Features cover OTC Derivatives product set (Rates, Credit, Equity)
-- Structured Notes - additional requirements not covered here.
+- Structured Notes - additional requirements not covered here
 - No ‘traditional’ position management
 
 ## Data Platform
@@ -11,12 +11,12 @@
 - Implement data persistence (define transaction boundaries)
 - Versioning and Audit Trail
 - Implement queryable data structure, potentially caching, based on fast access requirements (eg. real time risk management)
-- Implement a reporting sub-system for more batch based, user self-service or complex analytic queries.
-- Implement replication or sharding across geographical locations.  Consider regional data protection compliance, potentially segregation/sharding of counterparty.
-- Implement data archiving (legal/data retention requirements).
+- Implement a reporting sub-system for more batch based, user self-service or complex analytic queries
+- Implement replication or sharding across geographical locations.  Consider regional data protection compliance, potentially segregation/sharding of counterparty
+- Implement data archiving (legal/data retention requirements)
 
 ## Services Implementation
-- Ticketing service - control plane to allocate trace/workflow ids, monitor for workflow exceptions, facilitate replay.  Supports choreography of other event based services.
+- Ticketing service - control plane to allocate trace/workflow ids, monitor for workflow exceptions, facilitate replay.  Supports choreography of other event based services
 - Adaptors from vendor platforms (translation from raw lifecycle events to canonical model)
 - Reference Data sourcing
 - Orchestration of booking, STP, Clearing and distribution workflows
@@ -44,8 +44,8 @@
 
 ## Distribution
 - Publication Routing Rules invoked on each Lifecycle Event
-- Pragmatically, a transformation for different downstream requirements.
-- High performance cache query for notification / call back.
+- Pragmatically, a transformation for different downstream requirements
+- High performance cache query for notification / call back
 
 ## Lifecycle
 
@@ -85,7 +85,7 @@
 - 871M Tax Reassessments
 - Regulatory Reporting (EMIR, CFTC, MiFID II)
 
-### Reference Data Integration
+## Reference Data Integration
 - Counterparty
 - Book / Desk Hierarchy
 - Trader / Marketer / Broker
@@ -96,7 +96,7 @@
 - Calendars & Business Day Conventions
 - Currency / FX Rate Conventions
 
-### Straight Through Processing / Vendor Platform Integration
+## Straight Through Processing / Vendor Platform Integration
 - For ICELink (Credit) and MarkitWire (Credit/Rates/EQD)
 - Clearing Houses (CCIL, CME Group, Eurex Clearing, ICE Clear, LCH, JSCC, KRX)
 - Dealer to Client / Dealer to Dealer
@@ -108,18 +108,18 @@
   - Novations
   - Unwinds
 
-### Controls
+## Controls
 - Exception Management
 - Unapproved / Late trades
 - Pending Clearing
 - FOBO Reconciliation 
 - DTCC Reconciliation
 
-### IT Support Tooling
+## IT Support Tooling
 - Manage Exceptions (STP, Message Routing)
 - Configuration updates
 
-### Downstream Integration
+## Downstream Integration
 - Publication Routing Rules evaluation on each lifecycle event
 - Trading Risk
 - Market Risk
