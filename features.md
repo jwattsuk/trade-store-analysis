@@ -78,7 +78,7 @@
 - Call / Put Events (Embedded options)
 - Credit Events (CDS triggers)
 - Operational Events
-- Allocations
+- Block Allocations (splitting parent trades into child allocations across accounts)
 - Clearing Submissions / Status Updates
 - Legal Linkage / CSA Updates
 - Trade Enrichment / Corrections
